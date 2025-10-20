@@ -1,4 +1,4 @@
-package com.codewithmosh.store;
+package com.amin.store.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
