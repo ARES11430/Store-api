@@ -1,5 +1,6 @@
 package com.amin.store.controllers;
 
+import com.amin.store.dtos.RegisterUserRequest;
 import com.amin.store.dtos.UserDto;
 import com.amin.store.entities.User;
 import com.amin.store.mappers.UserMapper;
@@ -8,6 +9,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 import java.util.Set;
@@ -38,5 +40,18 @@ public class UserController {
 
        var userDto = userMapper.toDto(user);
        return ResponseEntity.ok(userDto);
+    }
+
+    @PostMapping
+    public ResponseEntity<UserDto> createUser(
+            @RequestBody RegisterUserRequest request,
+            UriComponentsBuilder uriBuilder) {
+        var user = userMapper.toEntity(request);
+        userRepository.save(user);
+
+        var userDto = userMapper.toDto(user);
+        var uri = uriBuilder.path("/users/{id}").buildAndExpand(userDto.getId()).toUri();
+
+        return ResponseEntity.created(uri).body(userDto);
     }
 }
