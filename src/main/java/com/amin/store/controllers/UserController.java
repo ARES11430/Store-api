@@ -1,6 +1,7 @@
 package com.amin.store.controllers;
 
 import com.amin.store.dtos.RegisterUserRequest;
+import com.amin.store.dtos.UpdateUserRequest;
 import com.amin.store.dtos.UserDto;
 import com.amin.store.entities.User;
 import com.amin.store.mappers.UserMapper;
@@ -21,7 +22,7 @@ import java.util.Set;
 public class UserController {
     private UserRepository userRepository;
     private UserMapper userMapper;
-    
+
     @GetMapping
     public List<UserDto> getAllUsers(@RequestParam(required = false, name = "sortBy") String sortBy) {
         List<User> users;
@@ -62,5 +63,20 @@ public class UserController {
         var uri = uriBuilder.path("/users/{id}").buildAndExpand(userDto.getId()).toUri();
 
         return ResponseEntity.created(uri).body(userDto);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<UserDto> updateUser(
+            @PathVariable(name = "id") Long id,
+            @RequestBody UpdateUserRequest request) {
+        var user = userRepository.findById(id).orElse(null);
+        if (user == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        userMapper.update(request, user);
+        userRepository.save(user);
+
+        return ResponseEntity.ok(userMapper.toDto(user));
     }
 }
