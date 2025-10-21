@@ -8,6 +8,7 @@ import com.amin.store.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -20,15 +21,23 @@ import java.util.Set;
 public class UserController {
     private UserRepository userRepository;
     private UserMapper userMapper;
-
+    
     @GetMapping
-    public List<UserDto> getAllUsers(@RequestParam(required = false, defaultValue = "", name = "sort") String sortBy) {
-        if(!Set.of("name", "email").contains(sortBy)) {
-            sortBy = "name";
+    public List<UserDto> getAllUsers(@RequestParam(required = false, name = "sortBy") String sortBy) {
+        List<User> users;
+
+        // 1. Check if the sortBy parameter has text and is a valid field
+        if (StringUtils.hasText(sortBy) && Set.of("name", "email").contains(sortBy)) {
+            // 2. If it's valid, sort the results
+            users = userRepository.findAll(Sort.by(sortBy));
+        } else {
+            // 3. Otherwise, get all users without any sorting
+            users = userRepository.findAll();
         }
 
-        return userRepository.findAll(Sort.by(sortBy)).stream()
-                .map(user -> userMapper.toDto(user)).toList();
+        return users.stream()
+                .map(user -> userMapper.toDto(user))
+                .toList();
     }
 
     @GetMapping("/{id}")
