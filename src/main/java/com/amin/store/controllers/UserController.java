@@ -7,6 +7,7 @@ import com.amin.store.dtos.UserDto;
 import com.amin.store.entities.User;
 import com.amin.store.mappers.UserMapper;
 import com.amin.store.repositories.UserRepository;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
@@ -56,7 +57,7 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<UserDto> createUser(
-            @RequestBody RegisterUserRequest request,
+            @Valid @RequestBody RegisterUserRequest request,
             UriComponentsBuilder uriBuilder) {
         var user = userMapper.toEntity(request);
         userRepository.save(user);
