@@ -1,5 +1,6 @@
 package com.amin.store.dtos;
 
+import com.amin.store.validation.Lowercase;
 import jakarta.validation.constraints.*;
 import lombok.Data;
 
@@ -11,6 +12,7 @@ public class RegisterUserRequest {
 
     @NotBlank(message = "Email is required")
     @Email(message = "Email must be valid")
+    @Lowercase(message = "Email must be in lowercase")
     private String email;
 
     @NotBlank(message = "Password is required")
