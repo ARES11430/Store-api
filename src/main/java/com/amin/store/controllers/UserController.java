@@ -111,11 +111,13 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
 
-        if (!user.getPassword().equals(request.getOldPassword())) {
+        // Use passwordEncoder.matches() for comparison
+        if (!passwordEncoder.matches(request.getOldPassword(), user.getPassword())) {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
 
-        user.setPassword(request.getNewPassword());
+        // Encode the new password before saving
+        user.setPassword(passwordEncoder.encode(request.getNewPassword()));
         userRepository.save(user);
 
         return ResponseEntity.noContent().build();
