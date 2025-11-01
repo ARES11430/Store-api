@@ -45,10 +45,25 @@ public class AuthController {
 
         var cookie = new Cookie("refreshToken", refreshToken);
         cookie.setHttpOnly(true);
-        cookie.setPath("/auth/refresh");
+        cookie.setPath("/");
         cookie.setMaxAge(jwtConfig.getRefreshTokenExpiration());
         cookie.setSecure(true);
         response.addCookie(cookie);
+
+        return ResponseEntity.ok(new JwtResponse(accessToken));
+    }
+
+    @PostMapping("/refresh")
+    public ResponseEntity<JwtResponse> refresh(
+            @CookieValue(value = "refreshToken") String refreshToken
+    ) {
+        if (!jwtService.validateToken(refreshToken)) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
+        var userId = jwtService.getUserIdFromToken(refreshToken);
+        var user = userRepository.findById(userId).orElseThrow();
+        var accessToken = jwtService.generateAccessToken(user);
 
         return ResponseEntity.ok(new JwtResponse(accessToken));
     }
