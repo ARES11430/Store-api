@@ -1,6 +1,7 @@
 package com.amin.store.services;
 
 import com.amin.store.config.JwtConfig;
+import com.amin.store.entities.Role;
 import com.amin.store.entities.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
@@ -58,5 +59,9 @@ public class JwtService {
 
     public Long getUserIdFromToken(String token) {
         return Long.valueOf(getClaims(token).getSubject());
+    }
+
+    public Role getRoleFromToken(String token) {
+        return Role.valueOf(getClaims(token).get("role", String.class));
     }
 }
