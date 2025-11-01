@@ -54,6 +54,12 @@ public class SecurityConfig {
                         c.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(c -> c
+                        // --- Swagger/Springdoc Paths ---
+                        .requestMatchers("/swagger-ui/**").permitAll() // The UI assets
+                        .requestMatchers("/v3/api-docs/**").permitAll() // The API spec
+                        .requestMatchers("/swagger-ui.html").permitAll() // The redirect page
+
+                        // --- other Rules ---
                         .requestMatchers("/carts/**").permitAll()
                         .requestMatchers("/admin/**").hasRole(Role.ADMIN.name())
                         .requestMatchers(HttpMethod.POST, "/users").permitAll()
