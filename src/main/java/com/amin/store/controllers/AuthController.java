@@ -1,5 +1,6 @@
 package com.amin.store.controllers;
 
+import com.amin.store.config.JwtConfig;
 import com.amin.store.dtos.JwtResponse;
 import com.amin.store.dtos.LoginRequest;
 import com.amin.store.dtos.UserDto;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
     private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;
+    private final JwtConfig jwtConfig;
     private final UserRepository userRepository;
     private final UserMapper userMapper;
 
@@ -44,7 +46,7 @@ public class AuthController {
         var cookie = new Cookie("refreshToken", refreshToken);
         cookie.setHttpOnly(true);
         cookie.setPath("/auth/refresh");
-        cookie.setMaxAge(604800); // 7d
+        cookie.setMaxAge(jwtConfig.getRefreshTokenExpiration());
         cookie.setSecure(true);
         response.addCookie(cookie);
 
