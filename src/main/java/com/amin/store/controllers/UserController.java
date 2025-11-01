@@ -4,6 +4,7 @@ import com.amin.store.dtos.ChangePasswordRequest;
 import com.amin.store.dtos.RegisterUserRequest;
 import com.amin.store.dtos.UpdateUserRequest;
 import com.amin.store.dtos.UserDto;
+import com.amin.store.entities.Role;
 import com.amin.store.entities.User;
 import com.amin.store.mappers.UserMapper;
 import com.amin.store.repositories.UserRepository;
@@ -68,6 +69,7 @@ public class UserController {
 
         var user = userMapper.toEntity(request);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setRole(Role.USER);
         userRepository.save(user);
 
         var userDto = userMapper.toDto(user);
