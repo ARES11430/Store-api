@@ -2,6 +2,7 @@ package com.amin.store.controllers;
 
 import com.amin.store.dtos.CheckoutRequest;
 import com.amin.store.dtos.CheckoutResponse;
+import com.amin.store.dtos.ErrorDto;
 import com.amin.store.entities.Order;
 import com.amin.store.entities.OrderItem;
 import com.amin.store.entities.OrderStatus;
@@ -36,13 +37,13 @@ public class CheckoutController {
         var cart = cartRepository.getCartWithItems(request.getCartId()).orElse(null);
         if (cart == null) {
             return ResponseEntity.badRequest().body(
-                    Map.of("error", "Cart not found")
+                    new ErrorDto("Cart not found")
             );
         }
 
         if (cart.getItems().isEmpty()) {
             return ResponseEntity.badRequest().body(
-                    Map.of("error", "Cart is empty")
+                    new ErrorDto("Cart is empty")
             );
         }
 
