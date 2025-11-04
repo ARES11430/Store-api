@@ -1,4 +1,4 @@
-package com.amin.store.config;
+package com.amin.store.payments;
 
 import com.stripe.Stripe;
 import jakarta.annotation.PostConstruct;

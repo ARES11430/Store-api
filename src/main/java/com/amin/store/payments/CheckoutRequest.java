@@ -1,4 +1,4 @@
-package com.amin.store.dtos;
+package com.amin.store.payments;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;

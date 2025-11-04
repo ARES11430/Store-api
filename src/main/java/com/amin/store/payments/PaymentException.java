@@ -1,4 +1,4 @@
-package com.amin.store.exceptions;
+package com.amin.store.payments;
 
 import lombok.NoArgsConstructor;
 

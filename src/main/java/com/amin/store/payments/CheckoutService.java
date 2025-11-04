@@ -1,14 +1,12 @@
-package com.amin.store.services;
+package com.amin.store.payments;
 
-import com.amin.store.dtos.CheckoutRequest;
-import com.amin.store.dtos.CheckoutResponse;
 import com.amin.store.entities.Order;
 import com.amin.store.exceptions.CartEmptyException;
 import com.amin.store.exceptions.CartNotFoundException;
-import com.amin.store.exceptions.PaymentException;
 import com.amin.store.repositories.CartRepository;
 import com.amin.store.repositories.OrderRepository;
-import com.stripe.exception.StripeException;
+import com.amin.store.services.AuthService;
+import com.amin.store.services.CartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

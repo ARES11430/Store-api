@@ -1,4 +1,4 @@
-package com.amin.store.services;
+package com.amin.store.payments;
 
 import com.amin.store.entities.PaymentStatus;
 import lombok.AllArgsConstructor;

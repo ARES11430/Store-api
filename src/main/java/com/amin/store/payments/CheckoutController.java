@@ -1,14 +1,9 @@
-package com.amin.store.controllers;
+package com.amin.store.payments;
 
-import com.amin.store.dtos.CheckoutRequest;
-import com.amin.store.dtos.CheckoutResponse;
 import com.amin.store.dtos.ErrorDto;
 import com.amin.store.exceptions.CartEmptyException;
 import com.amin.store.exceptions.CartNotFoundException;
 
-import com.amin.store.exceptions.PaymentException;
-import com.amin.store.services.CheckoutService;
-import com.amin.store.services.WebhookRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

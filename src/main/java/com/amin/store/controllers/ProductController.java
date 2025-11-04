@@ -6,7 +6,6 @@ import com.amin.store.mappers.ProductMapper;
 import com.amin.store.repositories.CategoryRepository;
 import com.amin.store.repositories.ProductRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
