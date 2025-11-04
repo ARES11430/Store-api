@@ -1,6 +1,5 @@
-package com.amin.store.repositories;
+package com.amin.store.users;
 
-import com.amin.store.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

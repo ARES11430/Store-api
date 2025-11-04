@@ -1,6 +1,5 @@
-package com.amin.store.repositories;
+package com.amin.store.users;
 
-import com.amin.store.entities.Address;
 import org.springframework.data.repository.CrudRepository;
 
 public interface AddressRepository extends CrudRepository<Address, Long> {

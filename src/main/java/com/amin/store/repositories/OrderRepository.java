@@ -1,7 +1,7 @@
 package com.amin.store.repositories;
 
 import com.amin.store.entities.Order;
-import com.amin.store.entities.User;
+import com.amin.store.users.User;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

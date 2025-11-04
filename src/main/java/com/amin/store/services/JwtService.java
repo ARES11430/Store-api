@@ -1,14 +1,11 @@
 package com.amin.store.services;
 
 import com.amin.store.config.JwtConfig;
-import com.amin.store.entities.Role;
-import com.amin.store.entities.User;
+import com.amin.store.users.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.security.Keys;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

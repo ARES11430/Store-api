@@ -1,4 +1,4 @@
-package com.amin.store.entities;
+package com.amin.store.users;
 
 import jakarta.persistence.*;
 import lombok.*;

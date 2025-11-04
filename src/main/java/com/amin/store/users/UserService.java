@@ -1,6 +1,5 @@
-package com.amin.store.services;
+package com.amin.store.users;
 
-import com.amin.store.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

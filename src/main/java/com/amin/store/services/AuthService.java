@@ -1,7 +1,7 @@
 package com.amin.store.services;
 
-import com.amin.store.entities.User;
-import com.amin.store.repositories.UserRepository;
+import com.amin.store.users.User;
+import com.amin.store.users.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;

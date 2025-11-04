@@ -1,5 +1,6 @@
 package com.amin.store.entities;
 
+import com.amin.store.users.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

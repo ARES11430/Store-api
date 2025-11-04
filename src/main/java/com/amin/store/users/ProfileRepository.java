@@ -1,6 +1,5 @@
-package com.amin.store.repositories;
+package com.amin.store.users;
 
-import com.amin.store.entities.Profile;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ProfileRepository extends CrudRepository<Profile, Long> {

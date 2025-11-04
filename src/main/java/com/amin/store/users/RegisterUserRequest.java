@@ -1,6 +1,5 @@
-package com.amin.store.dtos;
+package com.amin.store.users;
 
-import com.amin.store.validation.Lowercase;
 import jakarta.validation.constraints.*;
 import lombok.Data;
 

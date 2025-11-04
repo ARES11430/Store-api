@@ -1,6 +1,6 @@
 package com.amin.store.services;
 
-import com.amin.store.entities.Role;
+import com.amin.store.users.Role;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 

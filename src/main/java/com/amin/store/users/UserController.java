@@ -1,13 +1,5 @@
-package com.amin.store.controllers;
+package com.amin.store.users;
 
-import com.amin.store.dtos.ChangePasswordRequest;
-import com.amin.store.dtos.RegisterUserRequest;
-import com.amin.store.dtos.UpdateUserRequest;
-import com.amin.store.dtos.UserDto;
-import com.amin.store.entities.Role;
-import com.amin.store.entities.User;
-import com.amin.store.mappers.UserMapper;
-import com.amin.store.repositories.UserRepository;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Sort;

@@ -1,9 +1,5 @@
-package com.amin.store.mappers;
+package com.amin.store.users;
 
-import com.amin.store.dtos.RegisterUserRequest;
-import com.amin.store.dtos.UpdateUserRequest;
-import com.amin.store.dtos.UserDto;
-import com.amin.store.entities.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
