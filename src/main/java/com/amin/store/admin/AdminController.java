@@ -1,4 +1,4 @@
-package com.amin.store.controllers;
+package com.amin.store.admin;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

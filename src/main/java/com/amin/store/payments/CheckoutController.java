@@ -1,6 +1,6 @@
 package com.amin.store.payments;
 
-import com.amin.store.dtos.ErrorDto;
+import com.amin.store.common.ErrorDto;
 import com.amin.store.carts.CartEmptyException;
 import com.amin.store.carts.CartNotFoundException;
 

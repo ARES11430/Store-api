@@ -1,6 +1,6 @@
 package com.amin.store.orders;
 
-import com.amin.store.dtos.ErrorDto;
+import com.amin.store.common.ErrorDto;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
