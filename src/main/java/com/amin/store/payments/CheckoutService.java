@@ -1,10 +1,10 @@
 package com.amin.store.payments;
 
-import com.amin.store.entities.Order;
+import com.amin.store.orders.Order;
 import com.amin.store.carts.CartEmptyException;
 import com.amin.store.carts.CartNotFoundException;
 import com.amin.store.carts.CartRepository;
-import com.amin.store.repositories.OrderRepository;
+import com.amin.store.orders.OrderRepository;
 import com.amin.store.auth.AuthService;
 import com.amin.store.carts.CartService;
 import lombok.RequiredArgsConstructor;

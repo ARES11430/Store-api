@@ -1,9 +1,6 @@
-package com.amin.store.controllers;
+package com.amin.store.orders;
 
 import com.amin.store.dtos.ErrorDto;
-import com.amin.store.dtos.OrderDto;
-import com.amin.store.exceptions.OrderNotFoundException;
-import com.amin.store.services.OrderService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

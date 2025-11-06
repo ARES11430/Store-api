@@ -1,6 +1,6 @@
 package com.amin.store.payments;
 
-import com.amin.store.entities.Order;
+import com.amin.store.orders.Order;
 
 import java.util.Optional;
 

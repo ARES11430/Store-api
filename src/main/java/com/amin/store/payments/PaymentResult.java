@@ -1,6 +1,6 @@
 package com.amin.store.payments;
 
-import com.amin.store.entities.PaymentStatus;
+import com.amin.store.orders.PaymentStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

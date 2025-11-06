@@ -1,4 +1,4 @@
-package com.amin.store.entities;
+package com.amin.store.orders;
 
 import com.amin.store.carts.Cart;
 import com.amin.store.users.User;

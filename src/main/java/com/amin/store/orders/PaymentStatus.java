@@ -1,4 +1,4 @@
-package com.amin.store.entities;
+package com.amin.store.orders;
 
 public enum PaymentStatus {
     PENDING,

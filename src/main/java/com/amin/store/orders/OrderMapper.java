@@ -1,7 +1,5 @@
-package com.amin.store.mappers;
+package com.amin.store.orders;
 
-import com.amin.store.dtos.OrderDto;
-import com.amin.store.entities.Order;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

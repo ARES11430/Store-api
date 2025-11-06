@@ -1,8 +1,8 @@
 package com.amin.store.payments;
 
-import com.amin.store.entities.Order;
-import com.amin.store.entities.OrderItem;
-import com.amin.store.entities.PaymentStatus;
+import com.amin.store.orders.Order;
+import com.amin.store.orders.OrderItem;
+import com.amin.store.orders.PaymentStatus;
 import com.stripe.exception.SignatureVerificationException;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Event;
