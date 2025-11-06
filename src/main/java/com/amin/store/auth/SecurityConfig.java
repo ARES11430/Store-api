@@ -1,7 +1,6 @@
-package com.amin.store.config;
+package com.amin.store.auth;
 
 import com.amin.store.users.Role;
-import com.amin.store.filters.JwtAuthenticationFilter;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

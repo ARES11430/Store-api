@@ -5,7 +5,7 @@ import com.amin.store.exceptions.CartEmptyException;
 import com.amin.store.exceptions.CartNotFoundException;
 import com.amin.store.repositories.CartRepository;
 import com.amin.store.repositories.OrderRepository;
-import com.amin.store.services.AuthService;
+import com.amin.store.auth.AuthService;
 import com.amin.store.services.CartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

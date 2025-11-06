@@ -1,6 +1,5 @@
-package com.amin.store.filters;
+package com.amin.store.auth;
 
-import com.amin.store.services.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

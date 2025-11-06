@@ -1,12 +1,8 @@
-package com.amin.store.controllers;
+package com.amin.store.auth;
 
-import com.amin.store.config.JwtConfig;
-import com.amin.store.dtos.JwtResponse;
-import com.amin.store.dtos.LoginRequest;
 import com.amin.store.users.UserDto;
 import com.amin.store.users.UserMapper;
 import com.amin.store.users.UserRepository;
-import com.amin.store.services.JwtService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;

@@ -1,4 +1,4 @@
-package com.amin.store.dtos;
+package com.amin.store.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.amin.store.config;
+package com.amin.store.auth;
 
 import io.jsonwebtoken.security.Keys;
 import lombok.Data;

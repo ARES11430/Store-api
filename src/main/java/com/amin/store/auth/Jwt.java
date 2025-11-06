@@ -1,4 +1,4 @@
-package com.amin.store.services;
+package com.amin.store.auth;
 
 import com.amin.store.users.Role;
 import io.jsonwebtoken.Claims;
