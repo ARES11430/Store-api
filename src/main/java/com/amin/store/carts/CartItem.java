@@ -1,4 +1,4 @@
-package com.amin.store.entities;
+package com.amin.store.carts;
 
 import com.amin.store.products.Product;
 import jakarta.persistence.*;

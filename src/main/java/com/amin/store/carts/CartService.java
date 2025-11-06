@@ -1,12 +1,6 @@
-package com.amin.store.services;
+package com.amin.store.carts;
 
-import com.amin.store.dtos.CartDto;
-import com.amin.store.dtos.CartItemDto;
-import com.amin.store.entities.Cart;
-import com.amin.store.exceptions.CartNotFoundException;
 import com.amin.store.products.ProductNotFoundException;
-import com.amin.store.mappers.CartMapper;
-import com.amin.store.repositories.CartRepository;
 import com.amin.store.products.ProductRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

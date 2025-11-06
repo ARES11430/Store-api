@@ -1,8 +1,8 @@
 package com.amin.store.payments;
 
 import com.amin.store.dtos.ErrorDto;
-import com.amin.store.exceptions.CartEmptyException;
-import com.amin.store.exceptions.CartNotFoundException;
+import com.amin.store.carts.CartEmptyException;
+import com.amin.store.carts.CartNotFoundException;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

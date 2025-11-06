@@ -1,4 +1,4 @@
-package com.amin.store.exceptions;
+package com.amin.store.carts;
 
 
 public class CartEmptyException extends RuntimeException {

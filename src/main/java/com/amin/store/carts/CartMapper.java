@@ -1,9 +1,5 @@
-package com.amin.store.mappers;
+package com.amin.store.carts;
 
-import com.amin.store.dtos.CartDto;
-import com.amin.store.dtos.CartItemDto;
-import com.amin.store.entities.Cart;
-import com.amin.store.entities.CartItem;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

@@ -1,5 +1,6 @@
-package com.amin.store.dtos;
+package com.amin.store.carts;
 
+import com.amin.store.dtos.CartProductDto;
 import lombok.Data;
 
 import java.math.BigDecimal;

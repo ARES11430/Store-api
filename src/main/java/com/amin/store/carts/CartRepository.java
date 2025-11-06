@@ -1,6 +1,5 @@
-package com.amin.store.repositories;
+package com.amin.store.carts;
 
-import com.amin.store.entities.Cart;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

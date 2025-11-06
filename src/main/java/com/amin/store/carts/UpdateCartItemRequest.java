@@ -1,4 +1,4 @@
-package com.amin.store.dtos;
+package com.amin.store.carts;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
