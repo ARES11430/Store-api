@@ -47,7 +47,7 @@ public class StripePaymentGateway implements PaymentGateway {
         }
     }
 
-    private static SessionCreateParams.PaymentIntentData createPaymentIntent(Order order) {
+    private SessionCreateParams.PaymentIntentData createPaymentIntent(Order order) {
         return SessionCreateParams.PaymentIntentData.builder()
                 .putMetadata("order_id", order.getId().toString())
                 .build();
