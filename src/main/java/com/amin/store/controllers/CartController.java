@@ -5,7 +5,7 @@ import com.amin.store.dtos.CartDto;
 import com.amin.store.dtos.CartItemDto;
 import com.amin.store.dtos.UpdateCartItemRequest;
 import com.amin.store.exceptions.CartNotFoundException;
-import com.amin.store.exceptions.ProductNotFoundException;
+import com.amin.store.products.ProductNotFoundException;
 import com.amin.store.services.CartService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

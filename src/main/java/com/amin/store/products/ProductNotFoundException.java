@@ -1,4 +1,4 @@
-package com.amin.store.exceptions;
+package com.amin.store.products;
 
 public class ProductNotFoundException extends RuntimeException{
 }

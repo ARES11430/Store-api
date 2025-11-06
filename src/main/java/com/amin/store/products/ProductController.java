@@ -1,10 +1,5 @@
-package com.amin.store.controllers;
+package com.amin.store.products;
 
-import com.amin.store.dtos.ProductDto;
-import com.amin.store.entities.Product;
-import com.amin.store.mappers.ProductMapper;
-import com.amin.store.repositories.CategoryRepository;
-import com.amin.store.repositories.ProductRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

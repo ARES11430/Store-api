@@ -1,4 +1,4 @@
-package com.amin.store.dtos;
+package com.amin.store.products;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package com.amin.store.users;
 
-import com.amin.store.entities.Product;
+import com.amin.store.products.Product;
 import jakarta.persistence.*;
 import lombok.*;
 

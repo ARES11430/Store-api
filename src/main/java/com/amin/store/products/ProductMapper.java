@@ -1,7 +1,5 @@
-package com.amin.store.mappers;
+package com.amin.store.products;
 
-import com.amin.store.dtos.ProductDto;
-import com.amin.store.entities.Product;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
